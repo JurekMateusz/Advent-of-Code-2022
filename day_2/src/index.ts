@@ -1,5 +1,4 @@
 const fs = require('fs');
-const util = require('util');
 import { mapToArg, Arg } from './mapping-args'
 import { checkRoundResult, RoundResult, countPoints } from './game-rulles'
 
@@ -18,7 +17,7 @@ let result = elfData
     )
     .map(result => countPoints(result.args, result.result))
     .reduce((accumulator, currentValue) => accumulator + currentValue, 0)
-    
+
 console.log(result)
 
 
