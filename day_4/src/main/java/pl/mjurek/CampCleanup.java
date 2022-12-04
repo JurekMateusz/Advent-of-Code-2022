@@ -25,7 +25,8 @@ public class CampCleanup {
     private static boolean oneRangeFullyContainTheOther(Tuple2<String, String> pair) {
         var oneSection = getNumberOfSections(pair._1);
         var secSection = getNumberOfSections(pair._2);
-        return oneSection.stream()
+//        return oneSection.contains(secSection) || secSection.contains(oneSection); part 1
+        return oneSection.stream() // part 2
                 .anyMatch(secSection::contains);
     }
 
